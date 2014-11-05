@@ -193,6 +193,9 @@ body,
       -ms-transform: scale(0.2);
           transform: scale(0.2);
 }
+.light {
+  opacity: 0;
+}
 .love-star .star {
   opacity: 0;
 }

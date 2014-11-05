@@ -10,4 +10,11 @@
 	// .from('.button', 2, { opacity: 0, scale: .2, ease: Elastic.easeOut })
 	// .from('.love-star', 1, { opacity: 0, scale: .2, ease: Elastic.easeOut })
 	// .from('.title', 1, { backgroundPosition: '50% -100%', ease: Elastic.easeOut })
+
+	$('body').jpreLoader({
+		loaderVPos: '70%',
+	}, function() {	//callback function
+		$('body').addClass('animation-play');
+	});
+	
 })(jQuery)
