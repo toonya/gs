@@ -1,19 +1,11 @@
+jQuery(document).ready(function($) {  
 
-(function($) {
-	// body...
-	// var t = new TimelineMax();
-	
-	// t
-	// .from('.light', 3, {opacity: 0})
-	// .from('.boy', 2, { left:'-100%' }, '-=2')
-	// .from('.girl', 2, { left: '200%' }, '-=2')
-	// .from('.button', 2, { opacity: 0, scale: .2, ease: Elastic.easeOut })
-	// .from('.love-star', 1, { opacity: 0, scale: .2, ease: Elastic.easeOut })
-	// .from('.title', 1, { backgroundPosition: '50% -100%', ease: Elastic.easeOut })
-
+	// site preloader -- also uncomment the div in the header and the css style for #preloader
 	$(window).load(function(){
-		$('#preload').hide();
-		$('#page').addClass('animation-play');
-	})
-	
-})(jQuery)
+		$('#preload').fadeOut('slow',function(){
+			$(this).remove();
+			$('#page').addClass('animation-play');
+		});		
+	});
+
+});
