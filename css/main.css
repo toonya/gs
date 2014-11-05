@@ -98,7 +98,7 @@ body,
   margin: 0 auto;
 }
 .light {
-  background: url(http://codepen.qiniudn.com/light.jpg);
+  background: url(http://codepen.qiniudn.com/datecinimalight2.jpg);
   background-position: center top;
   background-size: cover;
   background-repeat: no-repeat;
@@ -417,16 +417,16 @@ body,
   }
 }
 .animation-play .light {
-  -webkit-animation: light-in 2s forwards;
-          animation: light-in 2s forwards;
+  -webkit-animation: light-in 2s forwards 0.5s;
+          animation: light-in 2s forwards 0.5s;
 }
 .animation-play .boy {
-  -webkit-animation: boy-in 1.5s forwards 0.5s;
-          animation: boy-in 1.5s forwards 0.5s;
+  -webkit-animation: boy-in 1.5s forwards 1s;
+          animation: boy-in 1.5s forwards 1s;
 }
 .animation-play .girl {
-  -webkit-animation: girl-in 1.5s forwards 0.5s;
-          animation: girl-in 1.5s forwards 0.5s;
+  -webkit-animation: girl-in 1.5s forwards 1s;
+          animation: girl-in 1.5s forwards 1s;
 }
 .animation-play .love-star .star {
   -webkit-animation: love-star-in 0.5s forwards;
@@ -465,6 +465,6 @@ body,
           animation-delay: 1.7s;
 }
 .animation-play .button {
-  -webkit-animation: button-in 0.5s forwards 1s;
-          animation: button-in 0.5s forwards 1s;
+  -webkit-animation: button-in 0.5s forwards 1.5s;
+          animation: button-in 0.5s forwards 1.5s;
 }
