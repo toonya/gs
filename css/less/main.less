@@ -1,4 +1,4 @@
-html, body, .container, .page, .light, .effect, .title, .text {
+html, body, .container, .page, .couple, .light, .effect, .text {
 	width: 100%;
 	height: 100%;
 	margin: 0;
@@ -28,82 +28,140 @@ html, body, .container, .page, .light, .effect, .title, .text {
 	background-repeat: no-repeat;
 }
 
-.effect, .title {
+.text, .title {
 	position: absolute;
 	top: 0;
 	left: 0;
 }
 
-.effect {
-	opacity: .18;
-	//background: url(../img/effect.jpg) transparent no-repeat center top/100% 100%;
+.title {
+	height: 20%;
+	width: 100%;
+	top: 3%;
+
+	img {
+		display: block;
+		height: 100%;
+		margin: 0 auto;
+	}
 }
 
-.title {
-	background: url(../img/title.png);
-	background-repeat: no-repeat;
-	background-position: center 12px;
-	background-size: 77%;
+.text {
+	height: 8%;
+	width: 100%;
+	top: 25%;
+
+	img {
+		display: block;
+		height: 100%;
+		margin: 0 auto;
+	}
 }
 
 .couple {
 	position: absolute;
-	top: 50%;
+	top: 35%;
+	height: 45%;
 	width: 100%;
 }
 
 .button { 
 	position: absolute;
-	top: 135px;
+	bottom: 36px;
 	width: 100%;
 	text-align: center;
+	height: 8%;
 
 	a {
+		display: block;
+		width: 100%;
+		height: 100%;
+
 		img {
-			width: 150px;
+			display: block;
+			height: 100%;
+			margin: 0 auto;
 		}
 	}
 }
 
 .boy, .girl {
-	width: 15%;
 	position: absolute;
 	left: 50%;
+	width: 50%;
+	top: 20%;
+
+	height: 90%;
 
 	img {
-		width: 150px;
+		display: block;
+		height: 100%;
 	}
 }
 
 .boy {
-	transform: translateX(-200px);
+	left: 0;
+	img {
+		float: right;
+	}
+	transform: translateX( -60px);
 }
 .girl {
 	transform: translateX(60px);
-
-	img {
-		width: 131px;
-	}
 }
 
 .love-star {
-	background: url(../img/love01.png) ;
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: 100%;
-	width: 103px;
-	min-height: 128.5px;
 	position: absolute;
-	top: -107px;
+	top: 0;
 	left: 50%;
-	transform: translateX(-50%);
+	height: 10%;
+
+	.star {
+		position: absolute;
+		height: 100%;
+
+		img {
+			display: block;
+			height: 100%;
+		}
+
+		&:nth-child(1) {
+			left: -32px;
+			transform: scale(.9);
+		}&:nth-child(2) {
+			left: -40px;
+			top: 36px;
+		}&:nth-child(3) {
+			left: -32px;
+			top: 68px;
+			transform: scale(.8);
+		}&:nth-child(4) {
+			left: -32px;
+			top: 100px;
+			transform: scale(.6);
+		}&:nth-child(5) {
+			left: 12px;
+			transform: scale(.9);
+		}&:nth-child(6) {
+			left: 20px;
+			top: 36px;
+		}&:nth-child(7) {
+			left: 12px;
+			top: 68px;
+			transform: scale(.8);
+		}&:nth-child(8) {
+			left: 12px;
+			top: 100px;
+			transform: scale(.6);
+		}
+	}
 }
 
 .copyright {
 	text-align: center;
 	position: absolute;
 	width: 100%;
-	bottom: 24px;
+	bottom: 12px;
 	color: #666;
 	font-size: 10px;
 }
@@ -112,41 +170,31 @@ html, body, .container, .page, .light, .effect, .title, .text {
 // ! animation
 // ----------------------------------------
 
-.boy {
-	left: -150%;
+.couple {
+	transform: scale(.8);
+}
 
-	// &.animation-finish {
-	// 	left: 50%;
-	// }
+.boy {
+	left: -100%;
 }
 
 .girl {
-	left: 200%;
-
-	// &.animation-finish {
-	// 	left: 50%;
-	// }
+	left: 150%;
 }
 
 .button {
 	opacity: 0;
 	transform: scale(.2);
-
-	// &.animation-finish {
-	// 	opacity: 1;
-	// }
 }
 
-.light {
-	opacity: 0;
-
-	// &.animation-finish {
-	// 	opacity: 1;
-	// }
+.love-star {
+	.star {
+		opacity: 0;
+	}
 }
 
 @keyframes light-in {
-	0 {
+	0% {
 		opacity: 0;
 	}
 
@@ -156,18 +204,18 @@ html, body, .container, .page, .light, .effect, .title, .text {
 }
 
 @keyframes boy-in {
-	0 {
-		left: -150%;
+	0% {
+		left: -100%;
 	}
 
 	100% {
-		left: 50%;
+		left: 0%;
 	}
 }
 
 @keyframes girl-in {
-	0 {
-		left: 200%;
+	0% {
+		left: 150%;
 	}
 
 	100% {
@@ -175,8 +223,32 @@ html, body, .container, .page, .light, .effect, .title, .text {
 	}
 }
 
+@keyframes love-star-in {
+	0% {
+		opacity: 0;
+		transform: scale(.2);
+	}
+		
+	50% {
+		opacity: 1;
+		transform: scale(1.2);
+	}
+
+	66% {
+		transform: scale(.9);
+	}
+
+	83% {
+		transform: scale(1.1);
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
 @keyframes button-in {
-	0 {
+	0% {
 		opacity: 0;
 		transform: scale(.2);
 	}
@@ -213,8 +285,33 @@ html, body, .container, .page, .light, .effect, .title, .text {
 		animation: girl-in 1.5s forwards .5s;
 	}
 
+	.love-star {
+		.star {
+			// love-star-in
+			animation: love-star-in .5s forwards;
+
+			&:nth-child(1) {
+				animation-delay: 2.7s;
+			} &:nth-child(2) {
+				animation-delay: 2.3s;
+			} &:nth-child(3) {
+				animation-delay: 1.9s;
+			} &:nth-child(4) {
+				animation-delay: 1.5s;
+			} &:nth-child(5) {
+				animation-delay: 2.9s;
+			} &:nth-child(6) {
+				animation-delay: 2.5s;
+			} &:nth-child(7) {
+				animation-delay: 2.1s;
+			} &:nth-child(8) {
+				animation-delay: 1.7s;
+			} 
+		}
+	}
+
 	.button {
-		animation: button-in .5s forwards 1.8s;
+		animation: button-in .5s forwards 1s;
 	}
 }
 
@@ -223,39 +320,39 @@ html, body, .container, .page, .light, .effect, .title, .text {
 // ----------------------------------------
 
 
-@media (max-height: 580px) {
-	.couple {
-		transform-origin: 50% 0;
-		transform: scale(.9);
-	}
-}
+// @media (max-height: 580px) {
+// 	.couple {
+// 		transform-origin: 50% 0;
+// 		transform: scale(.9);
+// 	}
+// }
 
-@media (max-height: 540px) {
-	.couple {
-		transform: scale(.8);
-	}
-}
+// @media (max-height: 540px) {
+// 	.couple {
+// 		transform: scale(.8);
+// 	}
+// }
 
-@media (max-height: 500px) {
-	.couple {
-		transform: scale(.7);
-	}
-}
+// @media (max-height: 500px) {
+// 	.couple {
+// 		transform: scale(.7);
+// 	}
+// }
 
-@media (max-height: 480px) {
-	.couple {
-		top: 55%;
-	}
-}
+// @media (max-height: 480px) {
+// 	.couple {
+// 		top: 55%;
+// 	}
+// }
 
-@media (max-height: 440px) {
-	.couple {
-		top: 60%;
-	}
-}
+// @media (max-height: 440px) {
+// 	.couple {
+// 		top: 60%;
+// 	}
+// }
 
-@media (min-width: 480px) {
-	.title {
-		background-size: 60%;
-	}
-}
+// @media (min-width: 480px) {
+// 	.title {
+// 		background-size: 60%;
+// 	}
+// }
