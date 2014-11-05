@@ -13,18 +13,15 @@
 
 	var tl = new TimelineLite();
 
-	//tl
-	// .call(function(){
-	// 	$('.page').addClass('animation-play')
-	// }, [], this, 0)
-	
+	tl
+	.call(function(){
+		$('.page').addClass('animation-play')
+	}, [], this, 0)
 
-	// .call(function(){
-	// 	$('.light').addClass('animation-play')
-	// }, [], this, 0)
+	
 	// .call(function(){
 	// 	$('.light').addClass('animation-finish')
-	// }, [], this, 2)
+	// }, [], this, 3)
 	// .call(function(){
 	// 	$('.boy, .girl').addClass('animation-play');
 	// }, [], this, 2)

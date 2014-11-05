@@ -111,22 +111,110 @@ html, body, .container, .page, .light, .effect, .title, .text {
 // ----------------------------------------
 // ! animation
 // ----------------------------------------
+
+.boy {
+	left: -150%;
+
+	// &.animation-finish {
+	// 	left: 50%;
+	// }
+}
+
+.girl {
+	left: 200%;
+
+	// &.animation-finish {
+	// 	left: 50%;
+	// }
+}
+
+.button {
+	opacity: 0;
+	transform: scale(.2);
+
+	// &.animation-finish {
+	// 	opacity: 1;
+	// }
+}
+
 .light {
 	opacity: 0;
 
-	&.animation-finish {
-		opacity: 1;
-		animation: lightIn 2s;
-	}
+	// &.animation-finish {
+	// 	opacity: 1;
+	// }
 }
 
-@keyframes lightIn {
+@keyframes light-in {
 	0 {
 		opacity: 0;
 	}
 
 	100% {
 		opacity: 1;
+	}
+}
+
+@keyframes boy-in {
+	0 {
+		left: -150%;
+	}
+
+	100% {
+		left: 50%;
+	}
+}
+
+@keyframes girl-in {
+	0 {
+		left: 200%;
+	}
+
+	100% {
+		left: 50%;
+	}
+}
+
+@keyframes button-in {
+	0 {
+		opacity: 0;
+		transform: scale(.2);
+	}
+
+	50% {
+		opacity: 1;
+		transform: scale(1.2);
+	}
+
+	66% {
+		transform: scale(.9)
+	}
+
+	83% {
+		transform: scale(1.1)
+	}
+
+	100% {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
+.animation-play {
+	.light {
+		animation: light-in 2s forwards;
+	}
+
+	.boy {
+		animation: boy-in 1.5s forwards .5s;
+	}
+
+	.girl {
+		animation: girl-in 1.5s forwards .5s;
+	}
+
+	.button {
+		animation: button-in .5s forwards 1.8s;
 	}
 }
 
