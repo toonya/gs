@@ -1,5 +1,6 @@
 html,
 body,
+.preload,
 .container,
 .page,
 .couple,
@@ -13,6 +14,11 @@ body,
 }
 * {
   box-sizing: border-box;
+}
+.preload {
+  background: #000;
+  position: absolute;
+  z-index: 999;
 }
 .page {
   background: #8b1c63;
